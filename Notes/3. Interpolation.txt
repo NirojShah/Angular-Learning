@@ -1,0 +1,180 @@
+# Interpolation in Angular
+
+Interpolation is a one-way data binding technique used to display data from the component to the HTML template.
+
+Syntax:
+
+{{ expression }}
+
+Angular evaluates the expression and updates the UI automatically when data changes.
+
+Example:
+
+Component:
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'
+})
+export class AppComponent {
+  title = 'Welcome to Angular';
+  username = 'john';
+  age = 22;
+  isLoggedIn = true;
+}
+
+Template:
+
+<h1>{{ title }}</h1>
+<p>{{ username }}</p>
+<p>{{ age }}</p>
+<p>{{ isLoggedIn }}</p>
+
+Using expressions:
+
+<p>{{ 10 + 20 }}</p>
+<p>{{ username.toUpperCase() }}</p>
+<p>{{ age + 1 }}</p>
+<p>{{ isLoggedIn ? 'Logged In' : 'Logged Out' }}</p>
+
+Rules:
+1. Supports variables
+2. Supports expressions
+3. Does not support assignments
+4. Does not support loops or conditions directly
+
+Valid:
+
+{{ name }}
+{{ age + 5 }}
+
+Invalid:
+
+{{ age = 20 }}
+
+--------------------------------------------------
+
+# Signals in Angular
+
+Signals are reactive state containers introduced in Angular 16.
+They automatically notify Angular when the value changes.
+
+Import signal:
+
+import { signal } from '@angular/core';
+
+Creating a signal:
+
+count = signal(0);
+
+Reading signal value:
+
+count()
+
+Setting value:
+
+count.set(5);
+
+Updating value:
+
+count.update(value => value + 1);
+
+Example:
+
+import { Component, signal } from '@angular/core';
+
+@Component({
+  selector: 'app-counter',
+  templateUrl: './counter.component.html'
+})
+export class CounterComponent {
+  count = signal(0);
+
+  increment() {
+    this.count.update(value => value + 1);
+  }
+
+  decrement() {
+    this.count.update(value => value - 1);
+  }
+
+  reset() {
+    this.count.set(0);
+  }
+}
+
+HTML:
+
+<h2>{{ count() }}</h2>
+
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<button (click)="reset()">Reset</button>
+
+--------------------------------------------------
+
+# Computed Signal
+
+Used to derive values from signals.
+
+import { signal, computed } from '@angular/core';
+
+price = signal(100);
+tax = signal(20);
+
+total = computed(() => price() + tax());
+
+HTML:
+
+<p>Price: {{ price() }}</p>
+<p>Tax: {{ tax() }}</p>
+<p>Total: {{ total() }}</p>
+
+--------------------------------------------------
+
+# Effect in Signals
+
+Runs automatically when signal value changes.
+
+import { signal, effect } from '@angular/core';
+
+count = signal(0);
+
+constructor() {
+  effect(() => {
+    console.log('Count changed:', count());
+  });
+}
+
+--------------------------------------------------
+
+# Interpolation with Signals
+
+Signals can be directly used inside interpolation.
+
+Component:
+
+import { Component, signal } from '@angular/core';
+
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html'
+})
+export class UserComponent {
+  name = signal('Angular');
+}
+
+HTML:
+
+<h1>{{ name() }}</h1>
+
+Output:
+
+Angular
+
+Summary:
+Interpolation = Display data in UI
+Signals = Reactive state management
+Signals + Interpolation = Automatic UI updates
