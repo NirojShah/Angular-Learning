@@ -1,0 +1,22 @@
+Angular CLI
+
+Angular CLI - Angular Command Line Interface
+
+For                                    Command
+
+install Angular CLI -                  npm i -g angular/cli
+angular/cli Version -                  ng version
+to creae an new project -              ng new projectName
+to run the app -                       ng serve
+to run and open -                      ng serve -o
+create component -                     ng g c componentName   (g = generate, c = component)                  
+create service -                       ng g s serviceName     (g = generate, s = service)          --> using the service you can do api calls, write common function, write bussiness logic etc
+create directory -                     ng g d directoryName   (g = generate, d = directory) 
+create pipeline -                      ng g p pipelineName    (g = generate, p = pipeline)
+production build -                     ng build
+unit test -                            ng test
+to get the command -                   ng help
+to integrate api+mcp                   ng mcp
+
+
+NOTE - it is not required like to use only Angular CLI you can create it manually as well, but the CLI saves time and it helps the developer to create the app very fast.
