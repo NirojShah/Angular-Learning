@@ -1,0 +1,13 @@
+<h1>This is binding</h1>
+
+<div [style.background-color]="bgCol" style="padding: 20px;">
+    <img [src]="imageUrl" [hidden]="isActive()" alt="Image not found." />
+</div>
+<div >
+  <button (click)="handleClick()" [disabled]="buttonStatus()">Click Me</button>
+  <button (click)="handleStatusChange()">toggle button status</button>
+</div>
+
+<div>
+  <input type="text" [value]="defaultValue" />
+</div>
