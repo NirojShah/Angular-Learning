@@ -1,0 +1,25 @@
+Folder Structure - 
+
+.angular - this contains all the configuration of the project, it is for internal configuraiton.
+.vscode - it contains the configuration for the VSCode.
+node_module - it contains all hte package of the applicaiton, eg - dependency, library installed. by default contains rxjs etc.
+.gitignore - to ignore the file or folder.
+public - it is to store the static files. which you want to display in the UI.
+
+
+src -
+    index.html - it is the root file of the app, it contains the app root 
+    main.ts - it is starting the application.
+    style.ts - it is the root style of the application.
+
+    app - 
+        app.config.ts - it is the standalone config file. which contains the routing, provider, global settings etc.
+        app.css - it is the second css after the index.css. it is the root level css inside the app.
+        app.html - it is also an root file inside the app folder.
+        app.route.ts - it is the standalone routing file, where we define the routes.
+        app.spec.ts - here we write the testcases of the application.
+
+
+angular.json - it contains the angular project configuration like how to create build, np command, etc.
+package.json - project details, scripts and the dependencies.
+tsconfig.app.json - it contains the configuration of the type script means where to find the typescript files and how to find.
