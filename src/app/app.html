@@ -1,5 +1,20 @@
-<h1>Niroj shah</h1>
+<h1>Angular Interpolation</h1>
 
-<p>{{name}}</p>
+<h1>My name is {{ name }}, and my age is {{ age }}</h1>
 
-<h1>{{userName}}</h1>
+<p>till now i have lived around {{ ageInDays(age) }} days ;)</p>
+
+<p>I have around {{ totalExperience() }} years of experience</p>
+
+<button (click)="increment()">Click to increase Experience</button>
+<button (click)="decrement()">click to decrease Experience</button>
+
+<div style="margin: 50px">
+  <input (input)="testing($event)" type="text" />
+  <button (click)="addItem(currentTodo())">add</button>
+
+  <div>tasks</div>
+  <div>
+    {{ todos().length > 0 ? todos() : 'no task' }}
+  </div>
+</div>
