@@ -1,0 +1,61 @@
+HOW ANGULAR WORKS - how angular works behind the hood.
+
+At a high level, Angular is a component-based framework that builds and updates your UI by organizing everything into a component tree.
+
+1. Component Tree - Think of your app like a tree.
+        <App>
+        ├── <Navbar>
+        ├── <Sidebar>
+        └── <Dashboard>
+            ├── <StatsCard>
+            ├── <Chart>
+            └── <UserList>
+    it goes from parent to child or top to botton.
+
+2. Rendering - Rendering is the process where Angular converts a component’s template and data into actual HTML elements and displays them in the browser.
+
+        How it works: Angular reads the template, replaces dynamic values with actual data, and creates DOM elements.
+
+        Example:
+
+        Template:
+
+        <h1>Hello {{name}}</h1>
+
+        Data:
+
+        name = "Niroj"
+
+        Rendered Output:
+
+        <h1>Hello Niroj</h1>
+
+        Simple Meaning:
+        Rendering = Template + Data → Visible UI on Screen.
+
+
+3. Change Detection - Change Detection is the process where Angular checks if the component data has changed and updates the UI automatically.
+
+        How it works:
+        Angular watches the component state. If any value changes, it compares the old and new values and updates only the affected part of the DOM.
+
+        Example:
+
+        Data change:
+
+        name = "Niroj";
+        name = "Shah";
+
+        Before:
+
+        <h1>Hello Niroj</h1>
+
+        After Change Detection:
+
+        <h1>Hello Shah</h1>
+
+        Simple Meaning:
+        Change Detection = Detect data changes → Update UI automatically.
+
+
+4. Interview Quesitons - 
