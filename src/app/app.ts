@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { SignupComponent } from './signup/signup';
 import { BindingComponent } from './binding/binding';
+import { EventComponent } from "./event/event";
 
 @Component({
   selector: 'app-root',
-  imports: [Login, SignupComponent, BindingComponent],
+  imports: [Login, SignupComponent, BindingComponent, EventComponent, EventComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -1,0 +1,23 @@
+<div>
+  {{ count }}
+</div>
+
+<div>
+  <button (click)="update(true)">increment</button>
+</div>
+
+<div>
+  <button (click)="update(false)">decrement</button>
+</div>
+
+<div class="button-danger">
+  <button (click)="checkEvent($event)">click me</button>
+</div>
+
+<div class="testing">
+  <div>
+    my full name is - <span>{{ userName }}</span>
+  </div>
+  <input type="text" placeholder="Full Name" (input)="handleChange($event.target.value)" />
+  <button>submit</button>
+</div>

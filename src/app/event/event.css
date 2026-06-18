@@ -1,0 +1,36 @@
+.button-danger {
+  padding: 50px;
+}
+
+.testing {
+  width: 100vw;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.testing input {
+  border: 2px solid gray;
+  border-radius: 5px;
+  height: 24px;
+  width: 250px;
+}
+
+.testing button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 6px;
+  background: rgb(255, 127, 234);
+  border: 2px solid red;
+  color: white;
+}
+
+.testing span {
+  font-size: 34px;
+  font-weight: bold;
+}
