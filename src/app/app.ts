@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { SignupComponent } from './signup/signup';
 import { BindingComponent } from './binding/binding';
-import { EventComponent } from "./event/event";
+import { EventComponent } from './event/event';
+import { Excersise1 } from './excersise1/excersise1';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, SignupComponent, BindingComponent, EventComponent, EventComponent],
+  imports: [Login, SignupComponent, BindingComponent, EventComponent, EventComponent, Excersise1],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -34,11 +35,11 @@ export class App {
 
   addItem(task: string): void {
     this.todos.update((val) => [...val, task]);
-    this.currentTodo.set("")
+    this.currentTodo.set('');
   }
 
   testing(x: Event) {
     const value: string = (x.target as HTMLInputElement).value;
-    this.currentTodo.set(value)
+    this.currentTodo.set(value);
   }
 }
