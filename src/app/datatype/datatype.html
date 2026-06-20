@@ -1,0 +1,38 @@
+<div class="main-div">
+  <div>
+    <p class="head-p">This is the DataType in Angular.</p>
+  </div>
+  <div class="user-playground">
+    <div class="input-div">
+      <input type="text" [defaultValue]="name()" (input)="handleInput($event)" placeholder="please enter your name." />
+      <input type="number" [defaultValue]="age()" (input)="handleInputAge($event)" placeholder="please enter your age." />
+    </div>
+    <div class="button-div">
+      <button (click)="handleAddValue()">add</button>
+    </div>
+  </div>
+  <div class="display-toggle">
+    <button (click)="handleToggleListDisplay()">show/hide</button>
+  </div>
+  <div class="list-div" [hidden]="showHideStatus()">
+    <div class="table-container">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (item of nameAgeList(); track $index) {
+            <tr>
+              <td>{{ item.name }}</td>
+              <td>{{ item.age }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
