@@ -5,10 +5,19 @@ import { SignupComponent } from './signup/signup';
 import { BindingComponent } from './binding/binding';
 import { EventComponent } from './event/event';
 import { Excersise1 } from './excersise1/excersise1';
+import { Datatype } from './datatype/datatype';
 
 @Component({
   selector: 'app-root',
-  imports: [Login, SignupComponent, BindingComponent, EventComponent, EventComponent, Excersise1],
+  imports: [
+    Datatype,
+    Login,
+    SignupComponent,
+    BindingComponent,
+    EventComponent,
+    EventComponent,
+    Excersise1,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
