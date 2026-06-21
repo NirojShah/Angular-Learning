@@ -1,0 +1,6 @@
+<p>Hello my name is {{ name | uppercase }}</p>
+<h1>Date is : {{ date | date: 'dd-mm-yyyy' }}</h1>
+
+<p>custom name piple - {{ name | customNamePipe: true }}</p>
+
+<p>custom name piple - {{ name | customNameArrArgsPipe: false : false : true }}</p>
