@@ -7,6 +7,7 @@ import { EventComponent } from './event/event';
 import { Excersise1 } from './excersise1/excersise1';
 import { Datatype } from './datatype/datatype';
 import { Pipeline } from './pipeline/pipeline';
+import { Signals } from './signals/signals';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { Pipeline } from './pipeline/pipeline';
     EventComponent,
     EventComponent,
     Excersise1,
-    Pipeline
+    Pipeline,
+    Signals
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

@@ -1,0 +1,20 @@
+<h1>Without Signal -</h1>
+<p>This is the Value of Count - {{count}}</p>
+<p>userName - {{name}}</p>
+
+<button (click)="increment(false)">set</button>
+
+
+
+<h1>With Signals - </h1>
+
+
+<p>This is the Value of Count - {{count1()}}</p>
+<p>userName - {{name1()}}</p>
+
+<button (click)="increment(true)">set</button>
+
+
+<h1>Display the JSON</h1>
+
+<p>{{jsonUser | json }}</p>
