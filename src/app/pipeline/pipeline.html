@@ -4,3 +4,8 @@
 <p>custom name piple - {{ name | customNamePipe: true }}</p>
 
 <p>custom name piple - {{ name | customNameArrArgsPipe: false : false : true }}</p>
+
+
+<p>Amount in Dollar = {{amountInDollar | currency}}</p>
+
+<p>Conversion in rupees = {{amountInDollar | currency: "INR"}}</p>
