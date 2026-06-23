@@ -1,0 +1,23 @@
+div{
+    padding: 16px;
+}
+input{
+    height: 24px;
+    width: 250px;
+    border-radius: 4px;
+    padding: 5px 8px;
+    border: 2px solid rgb(53, 191, 255);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+h1{
+    padding: 16px;
+    color: rgb(13, 83, 110);
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 24px;
+    padding: 16px;
+}
