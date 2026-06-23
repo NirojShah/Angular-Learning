@@ -1,0 +1,17 @@
+<h1>Using NG-MODEL(before anguar-21)</h1>
+
+<div>
+  <input [(ngModel)]="inputVal1" type="text" />
+  <h3>{{ inputVal1 }}</h3>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div>
+  <h1>In Angular 21+</h1>
+
+  <input [value]="inputVal2()" (input)="inputVal2.set($any($event.target).value)" type="text" />
+  <h3>{{ inputVal2() }}</h3>
+</div>
