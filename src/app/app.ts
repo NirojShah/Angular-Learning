@@ -8,6 +8,7 @@ import { Excersise1 } from './excersise1/excersise1';
 import { Datatype } from './datatype/datatype';
 import { Pipeline } from './pipeline/pipeline';
 import { Signals } from './signals/signals';
+import { TwoWayBinding } from './two-way-binding/two-way-binding';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { Signals } from './signals/signals';
     EventComponent,
     Excersise1,
     Pipeline,
-    Signals
+    Signals,
+    TwoWayBinding
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
