@@ -1,0 +1,27 @@
+<div class="container">
+  <p class="message">{{ errorMessage() }}</p>
+  <div class="header">
+    <h1>Welcome to Todo.</h1>
+  </div>
+  <div class="input-container"> 
+    <input
+      [value]="todoCurrent()"
+      (input)="todoCurrent.set($event.target.value)"
+      type="text"
+      placeholder="Enter your task."
+    />
+    <button (click)="addTodo(todoCurrent())">add</button>
+  </div>
+  <p>Todo Lists</p>
+  <div class="todo-container">
+    @for (item of todoLists(); track $index) {
+      <div class="todo-item" (click)="markAsComplete($index)">
+        <p class="slNo">{{ $index + 1 }}</p>
+        <p [style.text-decoration]="item.status ? 'line-through' : 'none'" class="title">
+          {{ item.title }}
+        </p>
+        <button (click)="deleteTask($index)" class="button">delete</button>
+      </div>
+    }
+  </div>
+</div>
