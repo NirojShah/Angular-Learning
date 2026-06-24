@@ -9,6 +9,7 @@ import { Datatype } from './datatype/datatype';
 import { Pipeline } from './pipeline/pipeline';
 import { Signals } from './signals/signals';
 import { TwoWayBinding } from './two-way-binding/two-way-binding';
+import { TodoTask } from './todo-task/todo-task';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { TwoWayBinding } from './two-way-binding/two-way-binding';
     Excersise1,
     Pipeline,
     Signals,
-    TwoWayBinding
+    TwoWayBinding,
+    TodoTask,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
