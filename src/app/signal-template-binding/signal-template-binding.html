@@ -1,0 +1,24 @@
+<h1>Signal + Template Binding.</h1>
+
+<div class="container">
+  <button (click)="handleRoleChange('admin')">change role(admin)</button>
+  <button (click)="handleRoleChange('user')">change role(user)</button>
+</div>
+
+<div class="container-list">
+  @if (role() == 'admin') {
+    @for (item of verNavOptions2(); track $index) {
+      <div class="item">{{$index+1}}. {{ item }}</div>
+    }
+  } @else {
+    @for (item of verNavOptions(); track $index) {
+      <div class="item">{{$index+1}}. {{ item }}</div>
+    }
+  }
+</div>
+
+
+<div class="container">
+  <button (click)="handleAddOptionInAdmin()">add admin option</button>
+  <button (click)="handleAddOptionInUser()">add user option</button>
+</div>
