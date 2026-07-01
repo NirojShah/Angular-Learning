@@ -12,6 +12,8 @@ import { TwoWayBinding } from './two-way-binding/two-way-binding';
 import { TodoTask } from './todo-task/todo-task';
 import { SignalTemplateBinding } from './signal-template-binding/signal-template-binding';
 import { InputUsingSignals } from './input-using-signals/input-using-signals';
+import { SignalsWithStore } from './signals-with-store/signals-with-store';
+import { Store } from './core/store/store';
 
 @Component({
   selector: 'app-root',
@@ -28,7 +30,8 @@ import { InputUsingSignals } from './input-using-signals/input-using-signals';
     TwoWayBinding,
     TodoTask,
     SignalTemplateBinding,
-    InputUsingSignals
+    InputUsingSignals,
+    SignalsWithStore,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -64,6 +67,11 @@ export class App {
     this.currentTodo.set(value);
   }
 
-
   parentValue = signal<string>('');
+
+
+
+
+
+  constructor( public counterStore: Store ){}
 }

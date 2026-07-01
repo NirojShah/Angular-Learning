@@ -40,7 +40,7 @@
 
 <!-- <app-signal-template-binding></app-signal-template-binding> -->
 
-<div style="border: 1px solid black; padding: 20px; margin: 20px">
+<!-- <div style="border: 1px solid black; padding: 20px; margin: 20px">
   <div style="border: 1px solid black; padding: 20px; margin: 20px">
     <h1>This is the parent component</h1>
     <input
@@ -58,5 +58,20 @@
   <div style="border: 1px solid black; padding: 20px; margin: 20px">
     <h1>This is the child component</h1>
     <app-input-using-signals #childComp [parentvalue]="parentValue()"></app-input-using-signals>
+  </div>
+</div> -->
+
+<div style="width: 250px; align-items: center; margin: 20px">
+  <div style="width: 250px; display: flex; justify-content: center; align-items: center; margin: 20px">
+    <h1>{{ counterStore.counter() }}</h1>
+  </div>
+  <div style="width: 250px; display: flex; justify-content: center; align-items: center; margin: 20px">
+    <app-signals-with-store></app-signals-with-store>
+    <button
+      style="background-color: lightgray; border: none; padding: 10px 20px; margin: 5px"
+      (click)="counterStore.decrement()"
+    >
+      -
+    </button>
   </div>
 </div>
