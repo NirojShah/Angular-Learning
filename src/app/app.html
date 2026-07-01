@@ -24,11 +24,7 @@
 
 <app-binding></app-binding> -->
 
-
-
-
 <!-- <app-event></app-event> -->
-
 
 <!-- <app-excersise1></app-excersise1> -->
 
@@ -42,4 +38,25 @@
 
 <!-- <app-todo-task></app-todo-task> -->
 
-<app-signal-template-binding></app-signal-template-binding>
+<!-- <app-signal-template-binding></app-signal-template-binding> -->
+
+<div style="border: 1px solid black; padding: 20px; margin: 20px">
+  <div style="border: 1px solid black; padding: 20px; margin: 20px">
+    <h1>This is the parent component</h1>
+    <input
+      style="padding: 10px; margin: 10px"
+      type="text"
+      (input)="parentValue.set($event.target.value)"
+    />
+
+    <p style="font-size: 18px">
+      This is the value from parent component:
+      <span style="font-weight: bold; font-size: 20px">{{ childComp.childValue() }}</span>
+    </p>
+  </div>
+
+  <div style="border: 1px solid black; padding: 20px; margin: 20px">
+    <h1>This is the child component</h1>
+    <app-input-using-signals #childComp [parentvalue]="parentValue()"></app-input-using-signals>
+  </div>
+</div>

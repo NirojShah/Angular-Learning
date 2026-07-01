@@ -11,6 +11,7 @@ import { Signals } from './signals/signals';
 import { TwoWayBinding } from './two-way-binding/two-way-binding';
 import { TodoTask } from './todo-task/todo-task';
 import { SignalTemplateBinding } from './signal-template-binding/signal-template-binding';
+import { InputUsingSignals } from './input-using-signals/input-using-signals';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,8 @@ import { SignalTemplateBinding } from './signal-template-binding/signal-template
     Signals,
     TwoWayBinding,
     TodoTask,
-    SignalTemplateBinding
+    SignalTemplateBinding,
+    InputUsingSignals
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -61,4 +63,7 @@ export class App {
     const value: string = (x.target as HTMLInputElement).value;
     this.currentTodo.set(value);
   }
+
+
+  parentValue = signal<string>('');
 }
