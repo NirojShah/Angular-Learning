@@ -10,6 +10,7 @@ import { Pipeline } from './pipeline/pipeline';
 import { Signals } from './signals/signals';
 import { TwoWayBinding } from './two-way-binding/two-way-binding';
 import { TodoTask } from './todo-task/todo-task';
+import { SignalTemplateBinding } from './signal-template-binding/signal-template-binding';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { TodoTask } from './todo-task/todo-task';
     Signals,
     TwoWayBinding,
     TodoTask,
+    SignalTemplateBinding
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
