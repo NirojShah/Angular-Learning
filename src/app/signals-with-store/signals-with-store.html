@@ -8,5 +8,42 @@
   style="background-color: lightgray; border: none; padding: 10px 20px; margin: 5px"
   (click)="counterStore.reset()"
 >
-    Reset
+  Reset
 </button>
+
+<div
+  style="
+    width: 250px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  "
+>
+  <h1>This is the Signals store with user details</h1>
+
+  <button
+    style="background-color: lightgray; border: none; padding: 10px 20px; margin: 5px"
+    (click)="userStore.handleLogin('john', 'user')"
+  >
+    login as user
+  </button>
+  <button
+    style="background-color: lightgray; border: none; padding: 10px 20px; margin: 5px"
+    (click)="userStore.handleLogin('admin', 'admin')"
+  >
+    login as admin
+  </button>
+
+  <div>
+    @if (userStore.userDetail() != null) {
+      @if (userStore.isAdmin()) {
+        <p>Welcome Admin</p>
+      } @else if (userStore.isUser()) {
+        <p>Welcome User</p>
+      }
+    } @else {
+      <p>you are not logged in.</p>
+    }
+  </div>
+</div>
