@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="template-driven-form">
+    <h1>Template Driven form</h1>
+    <form>
+      <input
+        type="text"
+        placeholder="User Name"
+        [(ngModel)]="userName"
+        (ngModelChange)="userName.set($event.target.value)"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+        (ngModelChange)="password.set($event.target.value)"
+      />
+    </form>
+    <button (click)="handleSubmit()">Submit</button>
+  </div>
+
+  <div class="reactive-form">
+    <h1>Reactive form</h1>
+    <form [formGroup]="form" (ngSubmit)="handleReactiveSubmit()">
+      <input type="text" formControlName="userName" placeholder="User Name" />
+
+      <input type="password" formControlName="password" placeholder="Password" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    @if (submitPressed()) {
+      \
+      <p>{{ userDetails() | json }}</p>
+    }
+  </div>
+</div>
