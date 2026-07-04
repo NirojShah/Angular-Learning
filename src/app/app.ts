@@ -14,6 +14,7 @@ import { SignalTemplateBinding } from './signal-template-binding/signal-template
 import { InputUsingSignals } from './input-using-signals/input-using-signals';
 import { SignalsWithStore } from './signals-with-store/signals-with-store';
 import { Store } from './core/store/store';
+import { AngularForms } from './angular-forms/angular-forms';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ import { Store } from './core/store/store';
     SignalTemplateBinding,
     InputUsingSignals,
     SignalsWithStore,
+    AngularForms,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -69,9 +71,5 @@ export class App {
 
   parentValue = signal<string>('');
 
-
-
-
-
-  constructor( public counterStore: Store ){}
+  constructor(public counterStore: Store) {}
 }
