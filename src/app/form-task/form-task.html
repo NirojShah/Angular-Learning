@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>User signup Page</h1>
+
+  <form class="form" [formGroup]="formData">
+    <label for="userName">User Name <span class="required">*</span></label>
+    <input formControlName="userName" placeholder="User Name" required />
+    <label for="phone">Phone <span class="required">*</span></label>
+    <input formControlName="phone" placeholder="Phone" required />
+    <label for="email">Email<span class="required">*</span></label>
+    <input formControlName="email" placeholder="Email" required />
+    <label for="city">City<span class="required">*</span></label>
+    <input formControlName="city" placeholder="City" required />
+    <label for="state">State<span class="required">*</span></label>
+    <input formControlName="state" placeholder="State" required />
+    <label for="country">Country<span class="required">*</span></label>
+    <input formControlName="country" placeholder="Country" required />
+    <label for="password">Password<span class="required">*</span></label>
+    <input formControlName="password" type="password" placeholder="Password" required />
+  </form>
+
+  <div class="button-container">
+    <button class="submit-btn" (click)="handleSubmit()">Submit</button>
+    <button class="reset-btn" (click)="handleReset()">reset</button>
+  </div>
+</div>
+
+<div>
+  {{ userDetails() | json }}
+</div>
