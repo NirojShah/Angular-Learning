@@ -16,6 +16,7 @@ import { SignalsWithStore } from './signals-with-store/signals-with-store';
 import { Store } from './core/store/store';
 import { AngularForms } from './angular-forms/angular-forms';
 import { FormTask } from './form-task/form-task';
+import { UseCompo } from './use-compo/use-compo';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +36,8 @@ import { FormTask } from './form-task/form-task';
     InputUsingSignals,
     SignalsWithStore,
     AngularForms,
-    FormTask
+    FormTask,
+    UseCompo,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
