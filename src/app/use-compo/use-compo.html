@@ -23,4 +23,12 @@
       </app-button-component>
     }
   </div>
+
+  <h1>This is for Input</h1>
+  <app-input-comp
+    [label]="'Full Name'"
+    [type]="'text'"
+    [placeHolder]="'this is how we do'"
+    (change)="handleInputChangeComp($event)"
+  ></app-input-comp>
 </div>
