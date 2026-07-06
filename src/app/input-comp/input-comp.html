@@ -1,0 +1,9 @@
+<div class="input-container">
+  <label for="" class="label">{{ label() }}</label>
+  <input
+    class="inp"
+    [type]="type()"
+    [placeholder]="placeHolder()"
+    (input)="handleChange($event.target.value)"
+  />
+</div>

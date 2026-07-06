@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="insert-btn">
+    <button (click)="insertData()">populate</button>
+  </div>
+  <h1>This is for Cards.</h1>
+
+  <div class="card-container">
+    @for (item of cards(); track $index) {
+      <app-custom-card-component
+        [click]="()=> handleClick($index+1)"
+        [title]="item.title"
+        [description]="item.description"
+        [date]="item.date"
+        [status]="item.status"
+      ></app-custom-card-component>
+    }
+  </div>
+
+  <h1>This is for Button</h1>
+  <div class="card-container">
+    @for (item of button(); track $index) {
+      <app-button-component [label]="item.label" (onClick)="handleButtonclick($event)">
+      </app-button-component>
+    }
+  </div>
+
+  <h1>This is for Input</h1>
+  <app-input-comp
+    [label]="'Full Name'"
+    [type]="'text'"
+    [placeHolder]="'this is how we do'"
+    (change)="handleInputChangeComp($event)"
+  ></app-input-comp>
+</div>
