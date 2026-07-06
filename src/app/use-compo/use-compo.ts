@@ -1,6 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { CustomCardComponent } from '../custom-card-component/custom-card-component';
 import { ButtonComponent } from '../button-component/button-component';
+import { InputComp } from '../input-comp/input-comp';
+import { FormField } from '@angular/forms/signals';
 
 interface Card {
   title: string;
@@ -15,7 +17,7 @@ interface Button {
 
 @Component({
   selector: 'app-use-compo',
-  imports: [CustomCardComponent, ButtonComponent],
+  imports: [CustomCardComponent, ButtonComponent, InputComp, FormField],
   templateUrl: './use-compo.html',
   styleUrl: './use-compo.css',
 })
@@ -63,5 +65,10 @@ export class UseCompo {
 
   handleButtonclick(msg: string): void {
     console.log(msg);
+  }
+
+  // Input handler.
+  handleInputChangeComp(val: string): void {
+    console.log({ val });
   }
 }
