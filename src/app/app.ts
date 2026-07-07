@@ -17,6 +17,7 @@ import { Store } from './core/store/store';
 import { AngularForms } from './angular-forms/angular-forms';
 import { FormTask } from './form-task/form-task';
 import { UseCompo } from './use-compo/use-compo';
+import { NavBar } from './nav-bar/nav-bar';
 
 @Component({
   selector: 'app-root',
@@ -38,7 +39,9 @@ import { UseCompo } from './use-compo/use-compo';
     AngularForms,
     FormTask,
     UseCompo,
-  ],
+    NavBar,
+    RouterOutlet
+],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
