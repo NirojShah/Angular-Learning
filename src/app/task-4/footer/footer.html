@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="brand">
+      <h3>Orange<span>.com</span></h3>
+      <p>Building modern experiences with simple, elegant design.</p>
+    </div>
+
+    <div class="footer-links">
+      @for (item of navItems(); track $index) {
+        <a routerLink="{{ item.directUrl }}">{{ item.title }}</a>
+      }
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Orange.com. All rights reserved.</p>
+  </div>
+</footer>
