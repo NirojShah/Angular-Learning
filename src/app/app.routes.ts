@@ -1,11 +1,15 @@
 import { Routes } from '@angular/router';
-import { Home } from './home/home';
-import { HomePage } from './home-page/home-page';
-import { AboutPage } from './about-page/about-page';
-import { ContactPage } from './contact-page/contact-page';
-import { ProfilePage } from './profile-page/profile-page';
-import { Dashboard } from './nested-route/dashboard/dashboard';
-import { Profile } from './nested-route/profile/profile';
+// import { Home as Home1 } from './home/home';
+// import { HomePage } from './home-page/home-page';
+// import { AboutPage } from './about-page/about-page';
+// import { ContactPage } from './contact-page/contact-page';
+// import { ProfilePage } from './profile-page/profile-page';
+// import { Dashboard } from './nested-route/dashboard/dashboard';
+// import { Profile } from './nested-route/profile/profile';
+import { Home } from './task-4/home/home';
+import { Contact } from './task-4/contact/contact';
+import { Services } from './task-4/services/services';
+import { About } from './task-4/about/about';
 
 export const routes: Routes = [
   // {
@@ -24,23 +28,43 @@ export const routes: Routes = [
   //   path: 'profile',
   //   component: ProfilePage,
   // },
+  // {
+  //   path: 'dashboard',
+  //   component: Dashboard,
+  //   children: [
+  //     {
+  //       path: 'profile',
+  //       loadComponent: () => import('./nested-route/profile/profile').then((m) => m.Profile),
+  //     },
+  //     {
+  //       path: 'about',
+  //       loadComponent: () => import('./nested-route/about/about').then((m) => m.About),
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: '',
+  //   redirectTo: 'dashboard',
+  //   pathMatch: 'full',
+  // },
+
+  // Task 4 Routing for header and Footer.
   {
-    path: 'dashboard',
-    component: Dashboard,
-    children: [
+    path:"",
+    component: Home,
+    children:[
       {
-        path: 'profile',
-        loadComponent: () => import('./nested-route/profile/profile').then((m) => m.Profile),
+        path:"about",
+        component: About
       },
-      {
-        path: 'about',
-        loadComponent: () => import('./nested-route/about/about').then((m) => m.About),
+        {
+        path:"service",
+        component: Services
       },
-    ],
-  },
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
+        {
+        path:"contact",
+        component: Contact
+      }
+    ]
   },
 ];
