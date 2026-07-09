@@ -6,7 +6,6 @@ import { ContactPage } from './contact-page/contact-page';
 import { ProfilePage } from './profile-page/profile-page';
 import { Dashboard } from './nested-route/dashboard/dashboard';
 import { Profile } from './nested-route/profile/profile';
-import { About } from './nested-route/about/about';
 
 export const routes: Routes = [
   // {
@@ -31,11 +30,11 @@ export const routes: Routes = [
     children: [
       {
         path: 'profile',
-        component: Profile,
+        loadComponent: () => import('./nested-route/profile/profile').then((m) => m.Profile),
       },
       {
         path: 'about',
-        component: About,
+        loadComponent: () => import('./nested-route/about/about').then((m) => m.About),
       },
     ],
   },
