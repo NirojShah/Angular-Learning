@@ -3,8 +3,9 @@
     <p>Orange<span>.com</span></p>
   </div>
   <div class="left">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">home</a>
     @for (item of navBarcontent(); track $index) {
-      <a routerLink="{{ item.directUrl }}">{{ item.title }}</a>
+      <a routerLink="{{ item.directUrl }}" routerLinkActive="active">{{ item.title }}</a>
     }
   </div>
 </div>

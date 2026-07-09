@@ -6,8 +6,19 @@
     </div>
 
     <div class="footer-links">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >home</a
+      >
       @for (item of navItems(); track $index) {
-        <a routerLink="{{ item.directUrl }}">{{ item.title }}</a>
+        <a
+          routerLink="{{ item.directUrl }}"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ item.title }}</a
+        >
       }
     </div>
   </div>

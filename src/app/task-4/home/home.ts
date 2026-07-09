@@ -1,6 +1,6 @@
 import { Component, effect, signal } from '@angular/core';
 import { Header } from '../header/header';
-import { RouterOutlet } from '@angular/router';
+import {  RouterOutlet } from '@angular/router';
 import { Footer } from '../footer/footer';
 
 export interface HeaderContent {
