@@ -1,0 +1,71 @@
+.about-page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f7fbff 0%, #e6f4ff 100%);
+  box-sizing: border-box;
+}
+
+.about-card {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #1f78d1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text h1 {
+  margin: 0 0 16px;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.about-text p {
+  margin: 0 0 12px;
+  line-height: 1.7;
+  color: #5c5c5c;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 16px;
+}
+
+.about-highlights div {
+  background: #f4f9ff;
+  border-left: 4px solid #1f78d1;
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.about-highlights h3 {
+  margin: 0 0 6px;
+  color: #1f78d1;
+  font-size: 1.4rem;
+}
+
+.about-highlights p {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 800px) {
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}
