@@ -70,3 +70,8 @@
     gap: 12px;
   }
 }
+
+
+.footer-links .active{
+    text-decoration: 2px solid orange underline;
+}
