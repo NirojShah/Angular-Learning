@@ -18,6 +18,7 @@ import { AngularForms } from './angular-forms/angular-forms';
 import { FormTask } from './form-task/form-task';
 import { UseCompo } from './use-compo/use-compo';
 import { NavBar } from './nav-bar/nav-bar';
+import { Home } from './task-4/home/home';
 
 @Component({
   selector: 'app-root',
@@ -40,8 +41,9 @@ import { NavBar } from './nav-bar/nav-bar';
     FormTask,
     UseCompo,
     NavBar,
-    RouterOutlet
-],
+    RouterOutlet,
+    Home
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
