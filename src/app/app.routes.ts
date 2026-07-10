@@ -13,6 +13,7 @@ import { About } from './task-4/about/about';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { authGuard } from './auth-guard';
 import { Login } from './login/login';
+import { canDeactivateGuard } from './can-deactivate-guard';
 
 export const routes: Routes = [
   // {
@@ -70,6 +71,7 @@ export const routes: Routes = [
         path: 'contact',
         component: Contact,
         canActivate: [authGuard],
+        canDeactivate: [canDeactivateGuard],
       },
     ],
   },
