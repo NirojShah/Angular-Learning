@@ -14,6 +14,7 @@ import { PageNotFound } from './page-not-found/page-not-found';
 import { authGuard } from './auth-guard';
 import { Login } from './login/login';
 import { canDeactivateGuard } from './can-deactivate-guard';
+import { ProductDetail } from './product-detail/product-detail';
 
 export const routes: Routes = [
   // {
@@ -56,6 +57,7 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
+    canActivate: [authGuard],
     children: [
       {
         path: 'about',
@@ -72,6 +74,11 @@ export const routes: Routes = [
         component: Contact,
         canActivate: [authGuard],
         canDeactivate: [canDeactivateGuard],
+      },
+      {
+        path: 'product/:productId',
+        component: ProductDetail,
+        canActivate: [authGuard],
       },
     ],
   },
