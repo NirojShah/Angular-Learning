@@ -11,6 +11,8 @@ import { Contact } from './task-4/contact/contact';
 import { Services } from './task-4/services/services';
 import { About } from './task-4/about/about';
 import { PageNotFound } from './page-not-found/page-not-found';
+import { authGuard } from './auth-guard';
+import { Login } from './login/login';
 
 export const routes: Routes = [
   // {
@@ -57,16 +59,23 @@ export const routes: Routes = [
       {
         path: 'about',
         component: About,
+        canActivate: [authGuard],
       },
       {
         path: 'service',
         component: Services,
+        canActivate: [authGuard],
       },
       {
         path: 'contact',
         component: Contact,
+        canActivate: [authGuard],
       },
     ],
+  },
+  {
+    path: 'login',
+    component: Login,
   },
   {
     path: '**',
