@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Auth } from '../auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './login.css',
 })
 export class Login {
-  title: string = "Login Page"
+  title: string = 'Login Page';
+  auth = inject(Auth);
+  router = inject(Router);
+
+  Login(): void {
+    this.auth.login();
+  }
 }
