@@ -10,6 +10,7 @@ import { Home } from './task-4/home/home';
 import { Contact } from './task-4/contact/contact';
 import { Services } from './task-4/services/services';
 import { About } from './task-4/about/about';
+import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
   // {
@@ -50,21 +51,25 @@ export const routes: Routes = [
 
   // Task 4 Routing for header and Footer.
   {
-    path:"",
+    path: '',
     component: Home,
-    children:[
+    children: [
       {
-        path:"about",
-        component: About
+        path: 'about',
+        component: About,
       },
-        {
-        path:"service",
-        component: Services
+      {
+        path: 'service',
+        component: Services,
       },
-        {
-        path:"contact",
-        component: Contact
-      }
-    ]
+      {
+        path: 'contact',
+        component: Contact,
+      },
+    ],
+  },
+  {
+    path: '**',
+    component: PageNotFound,
   },
 ];
