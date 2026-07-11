@@ -1,0 +1,40 @@
+<div class="container">
+  <a routerLink="/" class="back">← Back to products</a>
+  @if (productDetails()) {
+    <div class="card">
+      <header class="card-head">
+        <h1 class="name">{{ productDetails()?.name }}</h1>
+        <div class="id">ID: {{ productDetails()?.productId }}</div>
+      </header>
+
+      <div class="grid">
+        <div class="field">
+          <div class="label">Category</div>
+          <div class="value">{{ productDetails()?.category }}</div>
+        </div>
+        <div class="field">
+          <div class="label">Vendor</div>
+          <div class="value">{{ productDetails()?.vendor }}</div>
+        </div>
+        <div class="field">
+          <div class="label">Quantity</div>
+          <div class="value">{{ productDetails()?.quantity }}</div>
+        </div>
+        <div class="field">
+          <div class="label">Service Center</div>
+          <div class="value">{{ productDetails()?.serviceCenter }}</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary">Buy now • ₹{{ productDetails()?.price }}</button>
+        <button class="btn-ghost">Add to cart</button>
+        <button class="btn-ghost" (click)="handleProductRemove(productDetails()?.productId!)">
+          remove
+        </button>
+      </div>
+    </div>
+  } @else {
+    <div class="empty">Product not found.</div>
+  }
+</div>

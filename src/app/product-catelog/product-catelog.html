@@ -1,0 +1,13 @@
+<div class="container">
+  <p class="title">Products</p>
+  <div class="products-catelog">
+    @for (item of productCatelogItems(); track $index) {
+      <div class="product-card" routerLink="/product/{{item.productId}}">
+        <p>{{ item.name }}</p>
+        <p>{{ item.price }}</p>
+        <p>{{ item.quantity }}</p>
+        <p>{{ item.vendor }}</p>
+      </div>
+    }
+  </div>
+</div>
