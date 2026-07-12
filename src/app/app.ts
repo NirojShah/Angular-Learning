@@ -19,6 +19,7 @@ import { FormTask } from './form-task/form-task';
 import { UseCompo } from './use-compo/use-compo';
 import { NavBar } from './nav-bar/nav-bar';
 import { Home } from './task-4/home/home';
+import { ComponentHooksUse } from './component-hooks-use/component-hooks-use';
 
 @Component({
   selector: 'app-root',
@@ -42,7 +43,8 @@ import { Home } from './task-4/home/home';
     UseCompo,
     NavBar,
     RouterOutlet,
-    Home
+    Home,
+    ComponentHooksUse,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
@@ -81,4 +83,20 @@ export class App {
   parentValue = signal<string>('');
 
   constructor(public counterStore: Store) {}
+
+  // React Hooks.
+
+  show = signal<boolean>(true);
+  count = signal<number>(0);
+
+  toggleShow(): void {
+    this.show.set(!this.show());
+  }
+
+  hooksTitle = signal<string>('This is the title.');
+
+  changeTitle(): void {
+    this.hooksTitle.set('New title' + this.count());
+    this.count.set(this.count() + 1);
+  }
 }
