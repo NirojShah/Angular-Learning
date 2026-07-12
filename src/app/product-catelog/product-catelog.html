@@ -2,11 +2,25 @@
   <p class="title">Products</p>
   <div class="products-catelog">
     @for (item of productCatelogItems(); track $index) {
-      <div class="product-card" routerLink="/product/{{item.productId}}">
-        <p>{{ item.name }}</p>
-        <p>{{ item.price }}</p>
-        <p>{{ item.quantity }}</p>
-        <p>{{ item.vendor }}</p>
+      <div class="container-item">
+        <div class="product-card" routerLink="/product/{{ item.productId }}">
+          <p>{{ item.name }}</p>
+          <p>{{ item.price }}</p>
+          <p>{{ item.quantity }}</p>
+          <p>{{ item.vendor }}</p>
+        </div>
+        <button
+          routerLink="/product-info"
+          [queryParams]="{
+            name: item.name,
+            price: item.price,
+            quantity: item.quantity,
+            vendor: item.vendor,
+          }"
+          class="view"
+        >
+          view
+        </button>
       </div>
     }
   </div>
