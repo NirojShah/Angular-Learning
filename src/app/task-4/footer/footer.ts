@@ -1,5 +1,5 @@
 import { Component, input, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from "@angular/router";
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { HeaderContent as LinkType } from '../home/home';
 
 @Component({
@@ -9,5 +9,11 @@ import { HeaderContent as LinkType } from '../home/home';
   styleUrl: './footer.css',
 })
 export class Footer {
-  navItems = input<LinkType[]>([])
+  navItems = input<LinkType[]>([]);
+
+  constructor(private router: Router) {}
+
+  handleCareerNavigate(): void {
+    this.router.navigate(['/career']);
+  }
 }
