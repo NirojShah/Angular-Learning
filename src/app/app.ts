@@ -20,6 +20,7 @@ import { UseCompo } from './use-compo/use-compo';
 import { NavBar } from './nav-bar/nav-bar';
 import { Home } from './task-4/home/home';
 import { ComponentHooksUse } from './component-hooks-use/component-hooks-use';
+import { SignalForms } from './signal-forms/signal-forms';
 
 @Component({
   selector: 'app-root',
@@ -45,6 +46,7 @@ import { ComponentHooksUse } from './component-hooks-use/component-hooks-use';
     RouterOutlet,
     Home,
     ComponentHooksUse,
+    SignalForms
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
