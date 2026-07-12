@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="page-title">Open Opportunities</h2>
+
+  @for (item of opportunities(); track $index) {
+    <div class="opportunity-card" (click)="handleNavigate(item.id)">
+      <p class="title">{{ item.title }}</p>
+      <p><span class="label">Location:</span> {{ item.location }}</p>
+      <p><span class="label">Mode:</span> {{ item.mode }}</p>
+      <p><span class="label">Experience:</span> {{ item.requiredExp }}+ yrs</p>
+      <p><span class="label">Package:</span> {{ item.package }}</p>
+    </div>
+  }
+</div>
