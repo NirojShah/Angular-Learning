@@ -6,10 +6,7 @@
     </div>
 
     <div class="footer-links">
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
         >home</a
       >
       @for (item of navItems(); track $index) {
@@ -20,6 +17,7 @@
           >{{ item.title }}</a
         >
       }
+      <button class="career-btn" (click)="handleCareerNavigate()">career page</button>
     </div>
   </div>
 
