@@ -16,6 +16,8 @@ import { Login } from './login/login';
 import { canDeactivateGuard } from './can-deactivate-guard';
 import { ProductDetail } from './product-detail/product-detail';
 import { ProductDetails2 } from './product-details2/product-details2';
+import { CareerPage } from './career-page/career-page';
+import { CareerDetails } from './career-details/career-details';
 
 export const routes: Routes = [
   // {
@@ -91,6 +93,14 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login,
+  },
+  {
+    path: 'career',
+    component: CareerPage,
+  },
+  {
+    path: 'career-details',
+    component: CareerDetails,
   },
   {
     path: '**',
