@@ -1,0 +1,41 @@
+<div class="details-page">
+  @if (opportunityDetail) {
+    <div class="detail-card">
+      <div class="hero-section">
+        <p class="role-type">{{ opportunityDetail.mode }}</p>
+        <h1>{{ opportunityDetail.title }}</h1>
+        <p class="subtitle">
+          {{ opportunityDetail.location }} • {{ opportunityDetail.requiredExp }}+ years experience
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <span class="label">Location</span>
+          <p>{{ opportunityDetail.location }}</p>
+        </div>
+        <div class="info-box">
+          <span class="label">Work Mode</span>
+          <p>{{ opportunityDetail.mode }}</p>
+        </div>
+        <div class="info-box">
+          <span class="label">Package</span>
+          <p>{{ opportunityDetail.package }}</p>
+        </div>
+        <div class="info-box">
+          <span class="label">Experience</span>
+          <p>{{ opportunityDetail.requiredExp }}+ yrs</p>
+        </div>
+      </div>
+
+      <div class="description-box">
+        <h3>About this opportunity</h3>
+        <p>{{ opportunityDetail.description }}</p>
+      </div>
+
+      <button class="apply-btn">Apply Now</button>
+    </div>
+  } @else {
+    <div class="empty-state">No opportunity selected.</div>
+  }
+</div>
