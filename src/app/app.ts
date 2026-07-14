@@ -21,6 +21,7 @@ import { NavBar } from './nav-bar/nav-bar';
 import { Home } from './task-4/home/home';
 import { ComponentHooksUse } from './component-hooks-use/component-hooks-use';
 import { SignalForms } from './signal-forms/signal-forms';
+import { MainPage } from './APIs/main-page/main-page';
 
 @Component({
   selector: 'app-root',
@@ -46,7 +47,8 @@ import { SignalForms } from './signal-forms/signal-forms';
     RouterOutlet,
     Home,
     ComponentHooksUse,
-    SignalForms
+    SignalForms,
+    MainPage,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
